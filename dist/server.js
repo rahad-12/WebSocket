@@ -17,8 +17,8 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('User disconnected:', socket.id);
     });
-    socket.on("message", (msg) => {
-        console.log(msg);
+    socket.on("chat", (msg) => {
+        socket.emit("chat-transfer", msg);
     });
 });
 // Serve static files from the 'node_modules' directory
