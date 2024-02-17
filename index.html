@@ -34,7 +34,7 @@
         socket.emit("chat", msg)
       }
 
-      socket.on("chat-transfer", () => {
+      socket.on("chat-transfer", (msg) => {
         let listItem = document.createElement("li")
         listItem.textContent = msg;
         const chatHistory = document.getElementById("chat-histoty")
