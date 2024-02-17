@@ -32,6 +32,7 @@
       function send() {
         let msg = document.getElementById("msg").value
         socket.emit("chat", msg)
+        document.getElementById("msg").value = ""
       }
 
       socket.on("chat-transfer", (msg) => {
